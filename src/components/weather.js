@@ -1,6 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
+//import styled from 'styled-components';
 
+/*
 const place = styled.div`
     font-size: 50em;
     font-style: bold;
@@ -11,7 +12,7 @@ const place = styled.div`
   const image = styled.div`
     width: 20em;
     height: 20em;
-  `;
+  `;  */
 
 const Weather = () => {
 
@@ -21,7 +22,7 @@ const Weather = () => {
         <br></br>
         <image><img src= '../icons/sun.png' alt="icon" /></image> */}
         <h1>London</h1>
-        <div><img src='../icons/cloud.png' /></div>
+        <div><img src='../icons/cloud.png' alt="image_icon" /></div>
         <div className="temperature">
           <h1>25&deg;</h1>
             {minmaxTemp(21,30)}
