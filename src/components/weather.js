@@ -14,19 +14,19 @@ const place = styled.div`
     height: 20em;
   `;  */
 
-const Weather = () => {
+const Weather = (props) => {
 
   return (
     <div className="container">
         {/* <place> London </place>
         <br></br>
         <image><img src= '../icons/sun.png' alt="icon" /></image> */}
-        <h1>London</h1>
-        <div><img src='../icons/cloud.png' alt="image_icon" /></div>
+        <h1>{props.city}, {props.country}</h1>
+        <div><img src={props.icon} alt="image_icon" style={{width: 90}} /></div>
         <div className="temperature">
-          <h1>25&deg;</h1>
-            {minmaxTemp(21,30)}
-          <h2>Slow Rain</h2>
+      <h1>{props.temperature}&deg;C</h1>
+            {minmaxTemp(props.min , props.max)}
+          <h2>{props.description}</h2>
         </div>
     </div>
   );
@@ -35,8 +35,8 @@ const Weather = () => {
 function minmaxTemp(min, max){
   return(
     <h2>
-      <span>{min}&deg; </span>
-      <span>{max}&deg;</span>
+      <span>{min}&deg;C </span>
+      <span>{max}&deg;C </span>
     </h2>
     
   )
